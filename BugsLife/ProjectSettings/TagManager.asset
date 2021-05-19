@@ -5,6 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - Tree
+  - SpotLight
+  - OilBarrel
+  - LampControl
+  - Eatable
+  - DrinkAble
+  - Mineable
+  - AI
+  - Generator
+  - Fruit
   layers:
   - Default
   - TransparentFX
