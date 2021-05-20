@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/MorningForest.unity
+    guid: 6db1a0b932c41c348a9e6b979f2f290c
+  - enabled: 1
+    path: Assets/Scenes/UnderGround.unity
+    guid: 23c956d4c47136e4a896b770c8dd45d3
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: fb5f3c9b756eea640a963354a7220f08, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 40b5d3bf122f12545b19a24c63cc80a5, type: 2}
