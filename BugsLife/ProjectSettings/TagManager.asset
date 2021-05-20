@@ -14,6 +14,8 @@ TagManager:
   - AI
   - Generator
   - Fruit
+  - Load
+  - Light
   layers:
   - Default
   - TransparentFX
