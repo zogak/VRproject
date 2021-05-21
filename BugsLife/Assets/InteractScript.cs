@@ -17,8 +17,8 @@ public class InteractScript : MonoBehaviour
         if (args.interactable.CompareTag("Light"))
         {
             Debug.Log("hit");
-            GameObject Light = args.interactable.transform.FindChild("Light").gameObject;
-            GameObject Spot = args.interactable.transform.FindChild("Spotlight").gameObject;
+            GameObject Light = args.interactable.transform.Find("Light").gameObject;
+            GameObject Spot = args.interactable.transform.Find("Spotlight").gameObject;
 
             if(Light.GetComponent<Light>().enabled && Spot.GetComponent<Light>().enabled)
             {

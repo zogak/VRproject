@@ -44,15 +44,19 @@ public class HandPresence : MonoBehaviour
                 // controller was found
                 // spawn the controller prefab at the location of the hand
                 spawnedController = Instantiate(prefab, transform);
+                Debug.Log("controller instantiated well");
 
             }
             else  // controller is unknown
             {
                 Debug.Log("Controller model not available, using the default model");
                 spawnedController = Instantiate(controllerPrefabs[0], transform);
+                Debug.Log("default controller instantiated");
             }
             spawnedHandModel = Instantiate(handmodelPrefab, transform);
+            Debug.Log("handmodel instantiated");
             handAnimator = spawnedHandModel.GetComponent<Animator>();
+            Debug.Log("Animator get");
         }
 
 
@@ -64,6 +68,7 @@ public class HandPresence : MonoBehaviour
         if (targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue) && triggerValue > 0.1f)
         {
             handAnimator.SetFloat("Trigger", triggerValue);
+            Debug.Log("Trigger");
         }
         else
         {
@@ -73,6 +78,7 @@ public class HandPresence : MonoBehaviour
         if (targetDevice.TryGetFeatureValue(CommonUsages.grip, out float gripValue) && gripValue > 0.1f)
         {
             handAnimator.SetFloat("Grip", gripValue);
+            Debug.Log("Grip");
         }
         else
         {
@@ -85,13 +91,16 @@ public class HandPresence : MonoBehaviour
     {
         if (!targetDevice.isValid)
         {
-            TryInitialize();
+            Debug.Log("try it again");
+            TryInitialize(); 
         }
         else
         {
             spawnedHandModel.SetActive(!showController);
             spawnedController.SetActive(showController);
+            Debug.Log("set active");
         }
+
         if (!showController)
         {
              UpdateHandAnimation();
