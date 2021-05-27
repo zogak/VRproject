@@ -12,7 +12,10 @@ public class InteractScript : MonoBehaviour
         if (args.interactable.CompareTag("Load"))
         {
             SceneManager.LoadScene("UnderGround");
+            GameManager.manager.changeUnderGround();
+            GameManager.manager.SceneStart = true;
         }
+
 
         if (args.interactable.CompareTag("Light"))
         {
