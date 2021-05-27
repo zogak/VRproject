@@ -16,6 +16,8 @@ TagManager:
   - Fruit
   - Load
   - Light
+  - GoThird
+  - Test
   layers:
   - Default
   - TransparentFX
@@ -23,8 +25,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Grab
+  - Climb
   - 
   - 
   - 
