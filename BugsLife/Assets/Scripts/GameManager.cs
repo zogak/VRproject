@@ -57,18 +57,14 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (nowScene == Scene.river)
-        {
-            GameObject obj = GameObject.FindGameObjectWithTag("Player");
-            obj.transform.position = new Vector3(-90.1f, 20.0f, 27.8f);
-        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        if(SceneManager.GetActiveScene().name == "MorningForest") //morningforest씬 활성화되었다면
+        
+        if (SceneManager.GetActiveScene().name == "MorningForest") //morningforest씬 활성화되었다면
         {
             if(nowScene == Scene.forest) //첫번째 장면
             {
@@ -76,7 +72,7 @@ public class GameManager : MonoBehaviour
             }
             if(nowScene == Scene.river) //세번째 장면(강가)
             {
-                if(SceneStart == true)
+                if (SceneStart == true)
                 {
                     //goRiverPoint();  //강가 위치로 player 위치 전환시키는 함수. 하지만 player 오브젝트의 xr rig 컴포넌트로 인해 원래 위치로 다시 돌아옴.
                     SceneStart = false;
