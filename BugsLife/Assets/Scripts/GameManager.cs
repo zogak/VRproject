@@ -27,6 +27,9 @@ public class GameManager : MonoBehaviour
     public Scene nowScene = Scene.forest;
     public bool SceneStart = false; //장면이 시작됨을 알려주는 변수. 장면 시작 시, initialize해야하는 것들을 처리하기위해 사용.
 
+    //boat관련 변수들 입니다
+    public int filledCount;
+    //-------boat---------
 
     private void Awake()
     {

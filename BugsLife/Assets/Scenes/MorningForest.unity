@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -231,6 +231,7 @@ GameObject:
   - component: {fileID: 83630697}
   - component: {fileID: 83630696}
   - component: {fileID: 83630699}
+  - component: {fileID: 83630700}
   m_Layer: 0
   m_Name: logT1
   m_TagString: Untagged
@@ -341,10 +342,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 83630700}
+        m_TargetAssemblyTypeName: logScript, Assembly-CSharp
+        m_MethodName: socketFilled
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 83630700}
+        m_TargetAssemblyTypeName: logScript, Assembly-CSharp
+        m_MethodName: socketNotFilled
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -363,6 +388,18 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
+--- !u!114 &83630700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83630694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e4da0d177fde6f41b5b2b8d2230cfed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &156116833
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,7 +441,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &190590234
 GameObject:
@@ -782,7 +819,7 @@ GameObject:
   - component: {fileID: 203052153}
   m_Layer: 0
   m_Name: log3
-  m_TagString: Untagged
+  m_TagString: log
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1046,13 +1083,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212272774}
   m_LocalRotation: {x: 0.0890943, y: 0.00049556704, z: 0.0059668557, w: 0.99600524}
-  m_LocalPosition: {x: 169.22292, y: 30.309, z: 204.82996}
+  m_LocalPosition: {x: 171.1, y: 30.59, z: 205.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1641536948}
   - {fileID: 1879259915}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 10.222, y: 0.119, z: 0.697}
 --- !u!143 &212272778
 CharacterController:
@@ -1357,7 +1394,7 @@ GameObject:
   - component: {fileID: 242754322}
   m_Layer: 0
   m_Name: log5
-  m_TagString: Untagged
+  m_TagString: log
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1573,6 +1610,7 @@ GameObject:
   - component: {fileID: 463552846}
   - component: {fileID: 463552845}
   - component: {fileID: 463552848}
+  - component: {fileID: 463552849}
   m_Layer: 0
   m_Name: logT3
   m_TagString: Untagged
@@ -1683,10 +1721,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 463552849}
+        m_TargetAssemblyTypeName: logScript, Assembly-CSharp
+        m_MethodName: socketFilled
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 463552849}
+        m_TargetAssemblyTypeName: logScript, Assembly-CSharp
+        m_MethodName: socketNotFilled
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -1705,6 +1767,18 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
+--- !u!114 &463552849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463552843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e4da0d177fde6f41b5b2b8d2230cfed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &476961655
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1896,7 +1970,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &726365432
 PrefabInstance:
@@ -2179,7 +2253,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &887417334
 GameObject:
@@ -2194,6 +2268,7 @@ GameObject:
   - component: {fileID: 887417337}
   - component: {fileID: 887417336}
   - component: {fileID: 887417339}
+  - component: {fileID: 887417340}
   m_Layer: 0
   m_Name: logT2
   m_TagString: Untagged
@@ -2304,10 +2379,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 887417340}
+        m_TargetAssemblyTypeName: logScript, Assembly-CSharp
+        m_MethodName: socketFilled
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 887417340}
+        m_TargetAssemblyTypeName: logScript, Assembly-CSharp
+        m_MethodName: socketNotFilled
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -2326,6 +2425,18 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
+--- !u!114 &887417340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887417334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e4da0d177fde6f41b5b2b8d2230cfed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &889320458
 GameObject:
   m_ObjectHideFlags: 0
@@ -2465,7 +2576,7 @@ GameObject:
   - component: {fileID: 889909782}
   m_Layer: 0
   m_Name: log6
-  m_TagString: Untagged
+  m_TagString: log
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2692,7 +2803,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 928420197}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 752, y: 21.26, z: 206.43}
+  m_LocalPosition: {x: 722, y: 21.52, z: 207.11}
   m_LocalScale: {x: 0.052642, y: 0.052642, z: 0.052642}
   m_Children:
   - {fileID: 1908288681}
@@ -2703,7 +2814,7 @@ Transform:
   - {fileID: 889909778}
   - {fileID: 1327235873}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1163473321
 PrefabInstance:
@@ -2714,7 +2825,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6598815579406187027, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187027, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2960,6 +3071,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 436318, guid: 975279b149c625d4bad9e7222b812858, type: 3}
   m_PrefabInstance: {fileID: 1303827272}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1312164520
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1312164522}
+  - component: {fileID: 1312164521}
+  m_Layer: 0
+  m_Name: boatManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1312164521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312164520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cec6739457aca594a9b0caf37223af41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  realBoat: {fileID: 0}
+--- !u!4 &1312164522
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312164520}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 174.92, y: 29.93, z: 206.06}
+  m_LocalScale: {x: 0.052642, y: 0.052642, z: 0.052642}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1320501294
 GameObject:
   m_ObjectHideFlags: 0
@@ -3013,19 +3168,7 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 156116834}
-        m_TargetAssemblyTypeName: InteractScript, Assembly-CSharp
-        m_MethodName: HandleSelectEnter
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -3136,7 +3279,7 @@ Transform:
   m_LocalScale: {x: 0.37998, y: 0.37998, z: 0.37998}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1320501300
 Rigidbody:
@@ -3206,7 +3349,7 @@ GameObject:
   - component: {fileID: 1404167491}
   m_Layer: 0
   m_Name: log4
-  m_TagString: Untagged
+  m_TagString: log
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3429,7 +3572,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &1406668844
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3478,19 +3621,7 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 156116834}
-        m_TargetAssemblyTypeName: InteractScript, Assembly-CSharp
-        m_MethodName: HandleSelectEnter
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -3601,7 +3732,7 @@ Transform:
   m_LocalScale: {x: 0.37998, y: 0.37998, z: 0.37998}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1448167818
 GameObject:
@@ -3857,6 +3988,7 @@ GameObject:
   - component: {fileID: 1461261757}
   - component: {fileID: 1461261756}
   - component: {fileID: 1461261759}
+  - component: {fileID: 1461261760}
   m_Layer: 0
   m_Name: logT4
   m_TagString: Untagged
@@ -3967,10 +4099,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1461261760}
+        m_TargetAssemblyTypeName: logScript, Assembly-CSharp
+        m_MethodName: socketFilled
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1461261760}
+        m_TargetAssemblyTypeName: logScript, Assembly-CSharp
+        m_MethodName: socketNotFilled
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -3989,6 +4145,18 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
+--- !u!114 &1461261760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461261754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e4da0d177fde6f41b5b2b8d2230cfed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1619698836
 GameObject:
   m_ObjectHideFlags: 0
@@ -4197,6 +4365,7 @@ GameObject:
   - component: {fileID: 1700255707}
   - component: {fileID: 1700255706}
   - component: {fileID: 1700255709}
+  - component: {fileID: 1700255710}
   m_Layer: 0
   m_Name: logT6
   m_TagString: Untagged
@@ -4307,10 +4476,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1700255710}
+        m_TargetAssemblyTypeName: logScript, Assembly-CSharp
+        m_MethodName: socketFilled
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1700255710}
+        m_TargetAssemblyTypeName: logScript, Assembly-CSharp
+        m_MethodName: socketNotFilled
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -4329,6 +4522,18 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
+--- !u!114 &1700255710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700255704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e4da0d177fde6f41b5b2b8d2230cfed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1711691182
 GameObject:
   m_ObjectHideFlags: 0
@@ -4583,6 +4788,7 @@ GameObject:
   - component: {fileID: 1796531925}
   - component: {fileID: 1796531924}
   - component: {fileID: 1796531927}
+  - component: {fileID: 1796531928}
   m_Layer: 0
   m_Name: logT5
   m_TagString: Untagged
@@ -4693,10 +4899,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1796531928}
+        m_TargetAssemblyTypeName: logScript, Assembly-CSharp
+        m_MethodName: socketFilled
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1796531928}
+        m_TargetAssemblyTypeName: logScript, Assembly-CSharp
+        m_MethodName: socketNotFilled
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -4715,6 +4945,18 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
+--- !u!114 &1796531928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796531922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e4da0d177fde6f41b5b2b8d2230cfed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1879259914
 GameObject:
   m_ObjectHideFlags: 0
@@ -4800,7 +5042,7 @@ GameObject:
   - component: {fileID: 1904647292}
   m_Layer: 0
   m_Name: log2
-  m_TagString: Untagged
+  m_TagString: log
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5019,7 +5261,7 @@ GameObject:
   - component: {fileID: 1908288685}
   m_Layer: 0
   m_Name: log1
-  m_TagString: Untagged
+  m_TagString: log
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5363,7 +5605,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1984509114
 GameObject:
@@ -5768,6 +6010,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nowScene: 0
   SceneStart: 0
+  filledCount: 0
 --- !u!4 &2110529005
 Transform:
   m_ObjectHideFlags: 0
@@ -5780,7 +6023,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2119276093
 GameObject:
@@ -5888,7 +6131,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7274777327904933079, guid: d557f258889f8494a9ea3ce84e26bca0, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 7274777327904933079, guid: d557f258889f8494a9ea3ce84e26bca0, type: 3}
       propertyPath: m_LocalScale.x
