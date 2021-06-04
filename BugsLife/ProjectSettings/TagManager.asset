@@ -19,6 +19,8 @@ TagManager:
   - GoThird
   - Test
   - log
+  - NPC
+  - Items
   layers:
   - Default
   - TransparentFX
@@ -28,7 +30,7 @@ TagManager:
   - UI
   - Grab
   - Climb
-  - 
+  - Items
   - 
   - 
   - 
