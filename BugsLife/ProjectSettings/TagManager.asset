@@ -21,6 +21,7 @@ TagManager:
   - log
   - NPC
   - Items
+  - seed
   layers:
   - Default
   - TransparentFX
