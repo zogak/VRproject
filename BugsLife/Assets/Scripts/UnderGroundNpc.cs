@@ -7,43 +7,67 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class UnderGroundNpc : MonoBehaviour
 {
+    [SerializeField]
+    Transform[] appearPos;
+    private int aPosNum = 0;
+
+    public float speed = 15f;
+
     public GameObject leftRay;
     public GameObject rightRay;
+    public GameObject squirrel;
 
     private XRRayInteractor leftRayInteractor;
     private XRRayInteractor rightRayInteractor;
+
+    public int howManyObjLeft = 4;
+    private bool squirrelAppeared = false;
+
 
     // Start is called before the first frame update
     void Awake()
     {
         leftRayInteractor = leftRay.GetComponent<XRRayInteractor>();
         rightRayInteractor = rightRay.GetComponent<XRRayInteractor>();
+
+        squirrel.transform.position = appearPos[aPosNum].transform.position;
+        aPosNum++;
+        squirrel.SetActive(false);
     }
 
     public void ItemSelected()
     {
-        Debug.Log("selected something");
-        Debug.Log(gameObject.name);
-        if (gameObject.name.Contains("Box")){
-            Debug.Log("Box selected");
-        }else if (gameObject.name.Contains("Leaves"))
-        {
-            Debug.Log("Leves selected");
-        }else if (gameObject.name.Contains("prop"))
-        {
-            Debug.Log("Prop selecte");
-        }else if (gameObject.name.Contains("Table"))
-        {
-            Debug.Log("Table selecte");
-        }
-        else
-        {
-            return;
-        }
+        Debug.Log("Item selected");
+        howManyObjLeft--;
     }
     // Update is called once per frame
     void Update()
     {
-        
+        if(howManyObjLeft == 0 && !squirrelAppeared)
+        {
+            SquirrelComes();
+        }
+    }
+
+    void SquirrelComes()
+    {
+        if (!squirrel.activeInHierarchy)
+        {
+            squirrel.SetActive(true);
+        }
+        Debug.Log("Squirrel Comes");
+
+        squirrel.transform.position = Vector3.MoveTowards(squirrel.transform.position, appearPos[aPosNum].position, speed * Time.deltaTime);
+
+        if(squirrel.transform.position == appearPos[aPosNum].position)
+        {
+            aPosNum++;
+        }
+       
+        if(aPosNum == appearPos.Length)
+        {
+            squirrelAppeared = true;
+        }
+       
     }
 }
