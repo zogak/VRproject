@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3558353781057732617
+--- !u!1 &190554
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,45 +8,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4191196787315120819}
-  - component: {fileID: 974401296014644502}
-  - component: {fileID: 3053778754686083548}
+  - component: {fileID: 401902}
+  - component: {fileID: 3370128}
+  - component: {fileID: 2380828}
   m_Layer: 0
-  m_Name: Sunflower_Seed
+  m_Name: Torii (Double Color)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4191196787315120819
+--- !u!4 &401902
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3558353781057732617}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 966.4147, y: 3.5, z: 1082.9403}
-  m_LocalScale: {x: 21.2879, y: 21.2879, z: 21.2879}
+  m_GameObject: {fileID: 190554}
+  m_LocalRotation: {x: -0.7070119, y: -0.011586303, z: -0.011586301, w: 0.7070118}
+  m_LocalPosition: {x: -3.2705662, y: 5.230589, z: -10.059818}
+  m_LocalScale: {x: 320.32614, y: 8.786152, z: 14.36354}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &974401296014644502
+--- !u!33 &3370128
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3558353781057732617}
-  m_Mesh: {fileID: 4603223716524335763, guid: e02df8ffaf3dfca4d87c7ec00c844415, type: 3}
---- !u!23 &3053778754686083548
+  m_GameObject: {fileID: 190554}
+  m_Mesh: {fileID: 4300002, guid: fe9ba93f508bf1849bce40f4ae043ed2, type: 3}
+--- !u!23 &2380828
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3558353781057732617}
+  m_GameObject: {fileID: 190554}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -59,7 +59,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7327800442260152422, guid: e02df8ffaf3dfca4d87c7ec00c844415, type: 3}
+  - {fileID: 2100000, guid: a8023dacadc48554aa66d416565b0c8b, type: 2}
+  - {fileID: 2100000, guid: 37e687fe135834a4190ea156f955d096, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

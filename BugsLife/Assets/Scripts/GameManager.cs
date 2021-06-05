@@ -38,7 +38,9 @@ public class GameManager : MonoBehaviour
         GameObject obj = GameObject.FindGameObjectWithTag("Player");
         GameObject child = obj.transform.GetChild(0).gameObject;
         GameObject ccild = child.transform.GetChild(0).gameObject;
-        ccild.GetComponent<FadeInOut>().OnFade(FadeState.FadeIn);
+        GameObject cccild = ccild.transform.GetChild(0).gameObject;
+        GameObject ccccild = cccild.transform.GetChild(0).gameObject;
+        ccccild.GetComponent<FadeInOut>().OnFade(FadeState.FadeIn);
 
 
         //장면 전환 시 하나의 게임 매니저만 유지되도록 설정
