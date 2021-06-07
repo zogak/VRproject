@@ -17,6 +17,8 @@ public class UnderGroundNpc : MonoBehaviour
     public GameObject rightRay;
     public GameObject squirrel;
 
+    private Animator squAnimator;
+
     private XRRayInteractor leftRayInteractor;
     private XRRayInteractor rightRayInteractor;
 
@@ -33,6 +35,8 @@ public class UnderGroundNpc : MonoBehaviour
         squirrel.transform.position = appearPos[aPosNum].transform.position;
         aPosNum++;
         squirrel.SetActive(false);
+
+        squAnimator = squirrel.GetComponent<Animator>();
     }
 
     public void ItemSelected()
@@ -46,6 +50,12 @@ public class UnderGroundNpc : MonoBehaviour
         if(howManyObjLeft == 0 && !squirrelAppeared)
         {
             SquirrelComes();
+            squAnimator.SetBool("Run", true);
+        }
+
+        if (squirrelAppeared)
+        {
+            SquirrelAnimations();
         }
     }
 
@@ -55,6 +65,7 @@ public class UnderGroundNpc : MonoBehaviour
         {
             squirrel.SetActive(true);
         }
+
         Debug.Log("Squirrel Comes");
 
         squirrel.transform.position = Vector3.MoveTowards(squirrel.transform.position, appearPos[aPosNum].position, speed * Time.deltaTime);
@@ -69,5 +80,10 @@ public class UnderGroundNpc : MonoBehaviour
             squirrelAppeared = true;
         }
        
+    }
+
+    void SquirrelAnimations()
+    {
+        squAnimator.SetBool("Run", false);
     }
 }
