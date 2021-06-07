@@ -91,6 +91,15 @@ public class GameManager : MonoBehaviour
             if (SceneStart == true)
             {
                 //underground씬 전환 시 설정해야하는 것 있으면 여기에 넣으면 됩니다.
+                /*UNDERGROUND씬 시작 시 FADEIN*/ //동작을 안해서 주석처리
+                /*
+                GameObject obj = GameObject.FindGameObjectWithTag("Player");
+                GameObject child = obj.transform.GetChild(0).gameObject;
+                GameObject ccild = child.transform.GetChild(0).gameObject;
+                GameObject cccild = ccild.transform.GetChild(0).gameObject;
+                GameObject ccccild = cccild.transform.GetChild(0).gameObject;
+                ccccild.GetComponent<FadeInOut>().OnFade(FadeState.FadeIn);
+                */
                 SceneStart = false;
             }
             

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class eatScript : MonoBehaviour
 {
@@ -18,6 +19,29 @@ public class eatScript : MonoBehaviour
         {
             Destroy(col.gameObject);
             audioSource.Play();
+        }
+    }
+
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.tag=="Load")
+        {
+            GameManager.manager.SceneStart = true;
+            GameManager.manager.changeUnderGround();
+            SceneManager.LoadScene("UnderGround");
+            
+        }
+        if (col.gameObject.tag == "Fadeout")
+        {
+            /*MorningForest씬 종료 시, FADEOUT*/ //동작을 안해서 주석처리
+            /*
+            GameObject obj = GameObject.FindGameObjectWithTag("Player");
+            GameObject child = obj.transform.GetChild(0).gameObject;
+            GameObject ccild = child.transform.GetChild(0).gameObject;
+            GameObject cccild = ccild.transform.GetChild(0).gameObject;
+            GameObject ccccild = cccild.transform.GetChild(0).gameObject;
+            ccccild.GetComponent<FadeInOut>().OnFade(FadeState.FadeOut);
+            */
         }
     }
 
