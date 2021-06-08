@@ -23,6 +23,15 @@ TagManager:
   - Items
   - seed
   - Fadeout
+  - door
+  - button f4
+  - button f5
+  - button f3
+  - button f2
+  - button f1
+  - button f6
+  - dandalion
+  - head
   layers:
   - Default
   - TransparentFX
@@ -33,8 +42,8 @@ TagManager:
   - Grab
   - Climb
   - Items
-  - 
-  - 
+  - head
+  - logs
   - 
   - 
   - 
