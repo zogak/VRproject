@@ -33,7 +33,6 @@ public class eatScript : MonoBehaviour
         }
         if (col.gameObject.tag == "Fadeout")
         {
-            /*MorningForest씬 종료 시, FADEOUT*/ //동작을 안해서 주석처리
             /*
             GameObject obj = GameObject.FindGameObjectWithTag("Player");
             GameObject child = obj.transform.GetChild(0).gameObject;
