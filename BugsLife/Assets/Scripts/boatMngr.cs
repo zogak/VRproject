@@ -8,6 +8,9 @@ public class boatMngr : MonoBehaviour
     Vector3 boatPos;
 
     public GameObject realBoat;
+    bool boat_make = false;
+    float speed = 3.0f;
+    float time = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +32,16 @@ public class boatMngr : MonoBehaviour
 
             //肯己等 焊飘 积己
             Instantiate(realBoat, boatPos, Quaternion.identity);
+
+            boat_make = true;
+
+        }
+
+        if(boat_make == true&&time<10.0f)
+        {
+            time += Time.deltaTime;
+            realBoat.transform.position += Vector3.forward * Time.deltaTime * speed;
         }
     }
+
 }
