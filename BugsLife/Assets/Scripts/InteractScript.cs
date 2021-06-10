@@ -18,7 +18,7 @@ public class InteractScript : MonoBehaviour
 
         if (args.interactable.CompareTag("GoThird")) //¾À2(underground)->¾À3(river)
         {
-            SceneManager.LoadScene("MorningForest");
+            SceneManager.LoadScene("River");
             GameManager.manager.changeRiver();
             GameManager.manager.SceneStart = true;
         }
