@@ -17,6 +17,11 @@ public class TextsUpdator : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     public GameObject dialoguePanel;
 
+    [SerializeField]
+    private Animator squAnim;
+    [SerializeField]
+    private UnderGroundNpc underGroundnpc;
+
     private int dialogueNum = 0;
 
     private bool sInteractHappened = false;
@@ -61,7 +66,13 @@ public class TextsUpdator : MonoBehaviour
         if (sInteractHappened)
         {
             return;
+        }else if(underGroundnpc.squState == SquState.move || underGroundnpc.squState == SquState.talking)
+        {
+            SquirrelBye();
+            return;
         }
+        squAnim.SetBool("Talk", true);
+        Debug.Log("talk: " + squAnim.GetBool("Talk"));
         dialoguePanel.SetActive(true);
         SquirrelDialogue();
         sInteractHappened = true;
@@ -69,9 +80,37 @@ public class TextsUpdator : MonoBehaviour
 
     public void SquirrelDialogue()
     {
-        Debug.Log("text");
-        dialogueText.SetText(squirrelDialogue[dialogueNum].dialogue);
-        dialogueNum++;
+        if(underGroundnpc.squState == SquState.appear)
+        {
+            if (dialogueNum >= squirrelDialogue.Length)
+            {
+                dialoguePanel.SetActive(false);
+                sInteractHappened = false;
+                underGroundnpc.squState = SquState.move;
+                Debug.Log(underGroundnpc.squState);
+                return;
+            }
+            Debug.Log("text");
+            dialogueText.SetText(squirrelDialogue[dialogueNum].dialogue);
+            dialogueNum++;
+        }
+        else if(underGroundnpc.squState == SquState.talking)
+        {
+            dialoguePanel.SetActive(false);
+        }
+        
+    }
+
+    public void SquirrelBye()
+    {
+        if(underGroundnpc.squState == SquState.move)
+        {
+            return;
+        }else if(underGroundnpc.squState == SquState.talking)
+        {
+            dialoguePanel.SetActive(true);
+            dialogueText.SetText("You can go up here. \nYou're a bug, so it'll be easy to climb the wall, right ?");
+        }
     }
 
     public void invokeTextDisable()
