@@ -12,6 +12,8 @@ public class boatMngr : MonoBehaviour
     float speed = 3.0f;
     float time = 0;
 
+    public GameObject particle;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,7 @@ public class boatMngr : MonoBehaviour
         {
             //원래 만든거 사라지고
             Destroy(boat);
+            particle.SetActive(false);
 
             //효과음
 

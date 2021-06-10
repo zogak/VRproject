@@ -5,11 +5,22 @@ using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
 
+public enum SquState
+{
+    inactive,
+    appear,
+    talking,
+    move
+}
+
 public class UnderGroundNpc : MonoBehaviour
 {
     [SerializeField]
     Transform[] appearPos;
+    [SerializeField]
+    Transform[] movePos;
     private int aPosNum = 0;
+    private int mPosNum = 0;
 
     public float speed = 15f;
 
@@ -24,6 +35,10 @@ public class UnderGroundNpc : MonoBehaviour
 
     public int howManyObjLeft = 4;
     private bool squirrelAppeared = false;
+
+    public SquState squState = SquState.inactive;
+
+    public AudioSource appeared;
 
 
     // Start is called before the first frame update
@@ -49,13 +64,28 @@ public class UnderGroundNpc : MonoBehaviour
     {
         if(howManyObjLeft == 0 && !squirrelAppeared)
         {
+            squState = SquState.appear;
             SquirrelComes();
             squAnimator.SetBool("Run", true);
         }
 
-        if (squirrelAppeared)
+        if (squirrelAppeared && squState == SquState.appear)
         {
-            SquirrelAnimations();
+            squAnimator.SetBool("Run", false);
+        }
+
+        if(squState == SquState.move)
+        {
+            squAnimator.SetBool("Talk", false);
+            squAnimator.SetBool("Walk", true);
+            SquirrelMoves();
+        }
+
+        if(squState == SquState.talking)
+        {
+            squAnimator.SetBool("Talk", true);
+            squAnimator.SetBool("Walk", false);
+            squAnimator.SetTrigger("Origin");
         }
     }
 
@@ -78,12 +108,26 @@ public class UnderGroundNpc : MonoBehaviour
         if(aPosNum == appearPos.Length)
         {
             squirrelAppeared = true;
+            appeared.Play();
         }
        
     }
 
-    void SquirrelAnimations()
+    void SquirrelMoves()
     {
-        squAnimator.SetBool("Run", false);
+        squirrel.transform.position = Vector3.MoveTowards(squirrel.transform.position, movePos[mPosNum].position, speed * Time.deltaTime);
+        squirrel.transform.LookAt(movePos[mPosNum]);
+
+        if (squirrel.transform.position == movePos[mPosNum].position)
+        {
+            mPosNum++;
+        }
+
+        if (mPosNum == appearPos.Length)
+        {
+            squirrel.transform.localEulerAngles = new Vector3(0, (float)-18.156, 0);
+            squState = SquState.talking;
+        }
     }
+
 }
