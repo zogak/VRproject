@@ -320,6 +320,7 @@ GameObject:
   - component: {fileID: 109434732388006827}
   - component: {fileID: 3312134168684379570}
   - component: {fileID: 5181220591961632142}
+  - component: {fileID: 8903490768347436891}
   m_Layer: 0
   m_Name: Left Hand Model
   m_TagString: Untagged
@@ -385,7 +386,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a96743aa5ea44be44add6f14d35778f3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8f5e8f2a386836b499303c3c9214e5bd, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -471,6 +472,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8903490768347436891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109434732395284509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c5e49d2c3493534d869e3b06338648d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &109434732395284511
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,7 +496,7 @@ GameObject:
   - component: {fileID: 109434732392105323}
   m_Layer: 0
   m_Name: hands:Lhand
-  m_TagString: Untagged
+  m_TagString: hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

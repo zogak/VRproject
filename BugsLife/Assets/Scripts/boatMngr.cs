@@ -14,6 +14,7 @@ public class boatMngr : MonoBehaviour
 
     public GameObject particle;
 
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -27,14 +28,19 @@ public class boatMngr : MonoBehaviour
     {
         if(GameManager.manager.filledCount == 6) //보트 완성
         {
+
             //원래 만든거 사라지고
-            Destroy(boat);
+            for(int i = 0; i<9; i++)
+            {
+                Destroy(boat.gameObject.transform.GetChild(i).gameObject);
+            }
+
             particle.SetActive(false);
 
             //효과음
 
             //완성된 보트 생성
-            Instantiate(realBoat, boatPos, Quaternion.identity);
+            Instantiate(realBoat, boatPos, Quaternion.Euler(new Vector3(-90, 0, 0)));
 
             boat_make = true;
 
@@ -43,8 +49,9 @@ public class boatMngr : MonoBehaviour
         if(boat_make == true&&time<10.0f)
         {
             time += Time.deltaTime;
-            realBoat.transform.position += Vector3.forward * Time.deltaTime * speed;
+            //realBoat.transform.position += Vector3.forward * Time.deltaTime * speed;
         }
     }
+
 
 }

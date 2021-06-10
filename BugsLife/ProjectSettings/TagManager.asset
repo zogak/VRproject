@@ -32,6 +32,8 @@ TagManager:
   - button f6
   - dandalion
   - head
+  - hand
+  - boat
   layers:
   - Default
   - TransparentFX
