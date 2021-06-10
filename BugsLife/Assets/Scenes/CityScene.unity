@@ -39177,6 +39177,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bfebc127e2ce014ca807e56e3041ecb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  seednum: 0
+  seedcnt: 0
+  eatcnt: 0
+  forestText: {fileID: 0}
   nowScene: 0
   SceneStart: 0
   filledCount: 0

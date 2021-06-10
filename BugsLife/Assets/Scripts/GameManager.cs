@@ -7,6 +7,18 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public int seednum = 0;
+    public bool seedcnt = false;
+    public bool eatcnt = false;
+    private bool audiocnt = true;
+    public Text forestText;
+
+    int ment = 0;
+    float timer;
+    int waitingTime;
+
+
+    AudioSource audioSource;
 
     public enum GameState
     {
@@ -62,29 +74,102 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        timer = 0.0f;
+        waitingTime = 3;
 
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        timer += Time.deltaTime;
         
         if (SceneManager.GetActiveScene().name == "MorningForest") //morningforest씬 활성화되었다면
         {
             if(nowScene == Scene.forest) //첫번째 장면
             {
-                
-            }
-            if(nowScene == Scene.river) //세번째 장면(강가)
-            {
-                if (SceneStart == true)
+                if (timer > waitingTime)
                 {
-                    //goRiverPoint();  //강가 위치로 player 위치 전환시키는 함수. 하지만 player 오브젝트의 xr rig 컴포넌트로 인해 원래 위치로 다시 돌아옴.
-                    SceneStart = false;
+                    ment++;
+                    timer = 0;
                 }
- 
+                if (ment == 1)
+                {
+                    forestText.text = "Hmm.. Where the hell am I?";
+                }
+                else if (ment == 2)
+                {
+                    forestText.text = "Did I become a little bug?";
+                }
+                else if (ment == 3)
+                {
+                    if (audiocnt == true)
+                    {
+                        forestText.text = "Anywhy...";
+                        audioSource.Play();
+                        audiocnt = false;
+                    }
+                }
+                else if (ment == 4)
+                {
+                    forestText.text = "Is this coming from my stomach?";
+
+                }
+                else if (ment == 5)
+                {
+                    forestText.text = "Oh there's some fruits!";
+                }
+                else if (ment == 6)
+                {
+                    forestText.text = "I wanna eat them now!!";
+                }
+                else if (ment == 7)
+                {
+                    forestText.text = " ";
+                }
+
+                if (eatcnt == true)
+                {
+                    int ran1 = Random.Range(0, 2);
+                    if (ran1 == 0)
+                    {
+                        forestText.text = "Yummy!";
+                    }
+                    else
+                    {
+                        forestText.text = "I'm getting full!";
+                    }
+                    eatcnt = false;
+                }
+                if (seedcnt == true)
+                {
+                    seednum++;
+                    if (seednum == 1)
+                    {
+                        forestText.text = "What is this seed..? ";
+                    }
+                    else
+                    {
+                        int ran = Random.Range(0, 2);
+                        if (ran == 0)
+                        {
+                            forestText.text = "Oh! I got total " + seednum + " seeds!";
+                        }
+                        else
+                        {
+                            forestText.text = "Hmm..What can I do with these seeds..?";
+                        }
+
+                    }
+
+                    seedcnt = false;
+
                 }
             }
+            
+        }
 
         if (SceneManager.GetActiveScene().name == "Underground") //underground씬 활성화되었다면
             {

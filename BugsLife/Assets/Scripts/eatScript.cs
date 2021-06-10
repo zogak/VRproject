@@ -17,6 +17,7 @@ public class eatScript : MonoBehaviour
     {
         if (col.collider.CompareTag("Fruit"))
         {
+            GameManager.manager.eatcnt= true;
             Destroy(col.gameObject);
             audioSource.Play();
         }
