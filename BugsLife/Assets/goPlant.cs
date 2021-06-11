@@ -4,14 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class HoleMent : MonoBehaviour
+public class goPlant : MonoBehaviour
 {
-
     bool go = false;
     int ment = 0;
     float timer;
     int waitingTime;
-    public Text forestText;
+    public Text cityText;
 
     void OnTriggerEnter(Collider col)
     {
@@ -24,7 +23,7 @@ public class HoleMent : MonoBehaviour
     void Start()
     {
         timer = 0.0f;
-        waitingTime = 2;
+        waitingTime = 3;
 
     }
 
@@ -40,15 +39,15 @@ public class HoleMent : MonoBehaviour
             }
             if (ment == 0)
             {
-                forestText.text = "What is this hole?";
+                cityText.text = "What's that sign up front?";
             }
             if (ment == 1)
             {
-                forestText.text = "I think it's a passageway to somewhere.";
+                cityText.text = "Save the earth..?";
             }
             if (ment == 2)
             {
-                forestText.text = "Let¡¯s go inside!";
+                cityText.text = "I need to go over there!";
             }
 
         }
