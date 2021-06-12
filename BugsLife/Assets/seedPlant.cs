@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
+using TMPro;
 
 public class seedPlant : MonoBehaviour
 {
@@ -16,6 +17,14 @@ public class seedPlant : MonoBehaviour
     public GameObject sprout;
     ContactPoint contact;
     GameObject instantiate;
+
+    public Image blackOut;
+    public Image logo;
+    public TextMeshProUGUI credit;
+    public GameObject volumeBefore;
+    public GameObject volumeAfter;
+
+    public AudioSource backGround;
 
     void OnCollisionEnter(Collision col)
     {
@@ -78,10 +87,29 @@ public class seedPlant : MonoBehaviour
             if (ment == 7)
             {
                 cityText.text = "Let's save the earth!!!";
+                Invoke("Ending", 3);
             }
 
         }
         
+    }
+
+    void Ending()
+    {
+        volumeBefore.SetActive(false);
+        volumeAfter.SetActive(true);
+
+        backGround.Stop();
+        GetComponent<AudioSource>().Play();
+
+        //fade 오브젝트 가져와서 알파값 최대로
+        blackOut.gameObject.SetActive(true);
+        Color canvasColor = blackOut.color;
+        canvasColor.a = 255;
+        blackOut.color = canvasColor;
+
+        logo.gameObject.SetActive(true);
+        credit.gameObject.SetActive(true);
     }
 
 }
