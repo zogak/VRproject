@@ -101,7 +101,7 @@ public class seedPlant : MonoBehaviour
 
         backGround.Stop();
         GetComponent<AudioSource>().Play();
-
+        //Debug.Log("ji");
         //fade 오브젝트 가져와서 알파값 최대로
         blackOut.gameObject.SetActive(true);
         Color canvasColor = blackOut.color;
