@@ -9,7 +9,7 @@ The purpose of this content is __to raise awareness of environmental pollution__
 * Platform : Oculus Quest 2
 
 ### Play Video
-
+* [link](https://www.youtube.com/watch?v=cXbqdtdudQw)
 
 ### Scene
 
