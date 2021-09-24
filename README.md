@@ -23,3 +23,9 @@ As the scene changes (forest → underground → river → city), the time goes 
 
 <img src = "https://user-images.githubusercontent.com/76643037/121783218-4ecf6d00-cbe8-11eb-9bad-49ac07489805.png" width = 40%>
 </p>
+
+### Contributors
+Kim Gyeongjin([**@attowls**](https://github.com/attowls)) | Kim Yejin ([**@yejinstar**](https://github.com/yejinstar))| Song Jihye ([**@JH-kor**](https://github.com/JH-kor))| Jang Yoona ([**@zogak**](https://github.com/zogak))
+----------------- | ----------------- | ----------------- | ----------------- |
+  VR programming  |   VR programming  |   VR programming  |   VR programming  |
+  Environmental research      | Environmental research| 2D UI Design      | Scenario
